@@ -1,0 +1,114 @@
+:root {
+    --color-bg-1: #fcb935;
+    --color-bg-2: #eb3d44;
+    --color-bg-3: #72b63c;
+  }
+
+html,
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.3;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  color: #111;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+
+}
+html *,
+html *:before,
+html *:after,
+body *,
+body *:before,
+body *:after {
+  box-sizing: border-box;
+}
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    overflow-y: auto;
+  }
+  
+  main {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    width: 100%;
+    
+  }
+  .page-background {
+    background-color: #efefef;
+  }
+    
+  ul{
+    list-style: none;
+  }
+
+section {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 100vh;
+    width: 100%;
+    top: 0;
+    left: 0;
+    padding: 2rem;
+    /* background-color: #fff; */
+    background: linear-gradient(45deg,#F17C58, #E94584, #24AADB , #27DBB1,#FFDC18, #FF3706);
+    background-size: 600% 100%;
+    border: 1px solid rgb(121, 121, 121);
+    animation: gradient 16s linear infinite;
+    animation-direction: alternate;
+    
+    /* margin: 1rem 1rem; */
+  }
+  section:not(:first-child) {
+    top: 100%;
+  }
+
+  .card {
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;  }
+    .mid-img {
+        height: 500px;
+        width: 70%;
+    }
+  /* section:nth-child(1) {
+    background-color: var(--color-bg-1);
+  }
+  section:nth-child(2) {
+    background-color: var(--color-bg-2);
+  }
+  section:nth-child(3) {
+    background-color: var(--color-bg-3);
+  }
+  section:not(:first-child) {
+    top: 100%;
+  } */
+.img-container{
+    display: grid;
+    height: 70%;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    justify-items: center;
+}
+
+.white-text {
+    color: #fff;
+}
+
+.img-container > img {
+    height: 280px;
+    width: 350px;
+}
+
+@keyframes gradient {
+    0% {background-position: 0%}
+    100% {background-position: 100%}
+}
